@@ -1,0 +1,43 @@
+<div class="container">
+    <div style="background-color: darkslateblue">
+         <h2 style="color: #ffffff">Parameters</h2>
+         <h3 style="color: #ffffff">Employee options</h3>
+    </div>
+
+    <div class="container" style="width: 80%;background-color: #ffffff">
+        <div id="newEmployee" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>NEW EMPLOYEE</h3>
+                    <div style="width: 150px" class="form-group"><label for="first_name">Name</label>
+                        <input type="text" class="form-control" required="required" placeholder="Ivan" ng-model="vm.newEmployee.first_name">
+                    </div>
+                    <div style="width: 150px" class="form-group"><label for="last_name">Last Name</label>
+                        <input type="text" class="form-control" required="required" placeholder="Ivanov" ng-model="vm.newEmployee.last_name">
+                    </div>
+                    <div  style="width: 200px" class="form-group">
+                        <label for="e_mail">Email</label>
+                        <input type="email" class="form-control" required="required" placeholder="ivan.ivanov@example.com" ng-model="vm.newEmployee.e_mail">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input style="margin: 15px; margin-top: 100px" type="checkbox" ng-model="vm.newEmployee.opt1">Parking Space</input>
+                    <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt2">Home Office</input>
+                    <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt3">Alchohol Consummation</input>
+                    <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt4">Toilet Access</input>
+                    <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt5">Weekly Proctology Exams</input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-success" id="saveNewEmp" ng-click="vm.sendData()">Save new Employee</button>
+                </div>
+                <div class="col-md-6">
+                    <a href="#/" id="getAllEmployees">
+                        <button class="btn btn-info" >View All Employees</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+</div>

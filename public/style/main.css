@@ -1,0 +1,45 @@
+body {
+    background-color: lightblue;
+}
+
+#headerDiv {
+    background-color: #ffffff;
+}
+
+#mainContainer {
+    height: auto;
+    background-color: #ffffff;
+    border: solid;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#btnAddNewEmp {
+    margin-left: 92%;
+}
+
+#newEmployee {
+    border:solid;
+    width: 80%;
+    background-color:lightseagreen;
+}
+
+#addNew {
+    margin-top: 30px;
+    margin-left: 50%;
+    position: fixed;
+}
+
+#dataContainer {
+    width: 80%;
+    background-color: #ffffff;
+}
+
+#footerDiv {
+    background-color: #ffffff;
+    height: 40px;
+}
+
+.employeeBox {
+    border: solid;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "web-app",
+  "description": "CRUD App",
+  "main": "server.js",
+  "authors": [
+    "Rafail Nikolov <nikolov_rafail@yahoo.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Employee",
+    "App"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "jquery": "^3.1.0",
+    "angular-animate": "^1.5.8",
+    "bootstrap-ui": "^2.1.3"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebApp</title>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css" />
+
+</head>
+<body>
+
+<!-- Header -->
+    <div id="headerDiv">
+        <div class="container" style="height: 50px">
+            <a href="/">
+                <p class="navbar-text" style="font-size: 25px;color: #23527c">Employee Manager?</p>
+            </a>
+        </div>
+    </div>
+
+
+<!-- Main -->
+    <div class="container" id="mainContainer">
+        <ui-view></ui-view>
+    </div>
+
+
+    <!-- SCRIPTS-->
+
+    <!-- Bower Components -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+
+    <!-- Angular Modules and Configs-->
+    <script src="app.js"></script>
+    <script src="app.config.js"></script>
+
+    <!-- Angular Controllers -->
+    <script src="employees/employees.controller.js"></script>
+    <script src="newEmployee/new.employee.controller.js"></script>
+    <script src="editEmployee/edit.employee.controller.js"></script>
+
+    <!-- Angular Factories and Services -->
+    <script src="newEmployee/new.empolyee.service.js"></script>
+    <script src="editEmployee/edit.employee.service.js"></script>
+    <script src="employees/employees.factory.js"></script>
+
+</body>
+</html>

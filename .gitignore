@@ -1,0 +1,17 @@
+# ignore all hiddens
+.*
+
+# but don't ignore the .gitignore
+!.gitignore
+
+# ignore all backup files
+*~
+
+# ignore node modules
+node_modules/
+
+# ignore bower components
+/bower_components
+
+# ignore npm-debug.log
+npm-debug.log
