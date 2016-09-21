@@ -11,7 +11,7 @@
 
         var vm = this;
 
-        vm.editEmployee = editEmployee;
+        //vm.editEmployee = editEmployee;
         vm.deleteEmployee = deleteEmployee;
 
         // Get all Employees at the initialization
@@ -21,9 +21,9 @@
         });
 
 
-        function editEmployee($index){
-            editEmployeeService.addEmployeeObj(vm.results[$index]);
-        }
+        //function editEmployee($index){
+        //    editEmployeeService.addEmployeeObj(vm.results[$index]);
+        //}
 
         function deleteEmployee($index){
             employeesFactory.deleteEmployee(vm.results[$index]._id)
