@@ -17,7 +17,7 @@
             editEmployeeService.sendData(vm.editEmployee)
                 .then(function(response){
                     if(response.data.edited){
-                        alert('Success.')
+                        alert('Success.');
                         $location.path('/');
                         $location.path();
                     } else {

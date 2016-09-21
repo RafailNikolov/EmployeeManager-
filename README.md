@@ -34,3 +34,14 @@ Once inside the DIR type:
     $ npm install
     $ bower install
 ```
+
+### RUN APP
+
+Once inside the DIR type:
+
+```
+    $ node server.js
+```
+Server is running on localhost:3232
+
+:)

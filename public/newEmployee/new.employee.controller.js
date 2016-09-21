@@ -23,7 +23,7 @@
             newEmployeeService.sendData(vm.newEmployee)
                 .then(function(response){
                 if(response.data.created){
-                    alert('Success.')
+                    alert('Success.');
                     $location.path('/');
                     $location.path();
                 } else {

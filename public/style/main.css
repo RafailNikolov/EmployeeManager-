@@ -2,14 +2,17 @@ body {
     background-color: lightblue;
 }
 
+#btnAddContainer {
+    background-color: lightblue;
+}
+
 #headerDiv {
-    background-color: #ffffff;
+    background-color: lightblue;
 }
 
 #mainContainer {
     height: auto;
     background-color: #ffffff;
-    border: solid;
     padding-right: 0;
     padding-left: 0;
 }
@@ -26,8 +29,7 @@ body {
 
 #addNew {
     margin-top: 30px;
-    margin-left: 50%;
-    position: fixed;
+    position: static;
 }
 
 #dataContainer {

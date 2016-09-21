@@ -1,5 +1,5 @@
-<div class="container">
-    <a id="addNew"href="#/addNew">
+<div id="btnAddContainer" class="container">
+    <a id="addNew" href="#/addNew">
         <button class="btn btn-success">+ Add New Employee</button>
     </a>
 </div>
@@ -21,8 +21,11 @@
                 <li>Weekly Proctology Exams : {{ empl.opt5 }} </li>
             </ol>
         </div>
-        <a href="#/edit"><button class="btn btn-primary" ng-click="vm.editEmployee($index)">Edit Employee</button></a>
-        <button class="btn btn-danger" ng-click="vm.deleteEmployee($index)">Delete Employee</button>
-
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+                <a href="#/edit"><button class="btn btn-primary" ng-click="vm.editEmployee($index)">Edit Employee</button></a>
+                <button class="btn btn-danger" ng-click="vm.deleteEmployee($index)">Delete Employee</button>
+            </div>
+        </div>
     </div>
 </div>
