@@ -22,6 +22,8 @@
                         $location.path();
                     } else {
                         alert('Failed.');
+                        $location.path('/');
+                        $location.path();
                     }
                 });
         }

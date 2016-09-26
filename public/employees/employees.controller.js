@@ -42,8 +42,7 @@
                                 alert('Employee Deleted.');
                         });
                     } else {
-                        alert('Employee NOT Deleted.')
-                        console.error('F*ckkkkkkkk !');
+                        alert('Employee NOT Deleted.');
                     }
                 });
         }

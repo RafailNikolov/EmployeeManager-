@@ -6,14 +6,14 @@
                 <h2>{{ empl.e_mail }} </h2>
             </center>
         </div>
-        <div>
-            <ol>
-                <li>Parking Space : {{ empl.opt1 }} </li>
-                <li>Home Office : {{ empl.opt2 }} </li>
-                <li>Alcohol Consumption : {{ empl.opt3 }} </li>
-                <li>Toilet Access : {{ empl.opt4 }} </li>
-                <li>Weekly Proctology Exams : {{ empl.opt5 }} </li>
-            </ol>
+        <div class="optionsDiv">
+            <ul>
+                <li><h4>Parking Space : {{ empl.opt1 ? "Yes" : "No" }} </h4></li>
+                <li><h4>Home Office : {{ empl.opt2 ? "Yes" : "No"  }} </h4></li>
+                <li><h4>Alcohol Consumption : {{ empl.opt3 ? "Yes" : "No"  }} </h4></li>
+                <li><h4>Toilet Access : {{ empl.opt4 ? "Yes" : "No"  }} </h4></li>
+                <li><h4>Weekly Proctology Exams : {{ empl.opt5 ? "Yes" : "No"  }} </h4></li>
+            </ul>
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-8">
