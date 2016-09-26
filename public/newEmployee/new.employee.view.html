@@ -1,24 +1,20 @@
 <div class="container">
 
-    <div style="background-color: darkslateblue">
-         <h2 style="color: #ffffff">Parameters</h2>
-         <h3 style="color: #ffffff">Employee options</h3>
-    </div>
 
-    <div class="container" style="width: 80%;background-color: #ffffff">
+    <div class="container" style="width: 100%;">
         <div id="newEmployee" class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h3>NEW EMPLOYEE</h3>
                     <div style="width: 150px" class="form-group"><label for="first_name">Name</label>
-                        <input type="text" class="form-control" required="required" placeholder="Ivan" ng-model="vm.newEmployee.first_name">
+                        <input type="text" class="form-control" required placeholder="Ivan" ng-model="vm.newEmployee.first_name">
                     </div>
                     <div style="width: 150px" class="form-group"><label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" required="required" placeholder="Ivanov" ng-model="vm.newEmployee.last_name">
+                        <input type="text" class="form-control" required placeholder="Ivanov" ng-model="vm.newEmployee.last_name">
                     </div>
                     <div  style="width: 200px" class="form-group">
                         <label for="e_mail">Email</label>
-                        <input type="email" class="form-control" required="required" placeholder="ivan.ivanov@example.com" ng-model="vm.newEmployee.e_mail">
+                        <input type="email" class="form-control" required placeholder="ivan.ivanov@example.com" ng-model="vm.newEmployee.e_mail">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -41,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-6">
-                    <button class="btn btn-success" id="saveNewEmp" ng-click="vm.sendData()">Save new Employee</button>
+                    <button type="submit" class="btn btn-success" id="saveNewEmp" ng-click="vm.sendData()">Save new Employee</button>
                     <a href="#/" id="getAllEmployees">
                         <button class="btn btn-info" >View All Employees</button>
                     </a>

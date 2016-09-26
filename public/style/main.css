@@ -2,19 +2,20 @@ body {
     background-color: lightblue;
 }
 
-#btnAddContainer {
-    background-color: lightblue;
+#headerDiv {
+    position: fixed;
+    width: 100%;
 }
 
-#headerDiv {
+#btnAddContainer {
     background-color: lightblue;
 }
 
 #mainContainer {
     height: auto;
-    background-color: #ffffff;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 8%;
 }
 
 #btnAddNewEmp {
@@ -42,6 +43,16 @@ body {
     height: 40px;
 }
 
+#goToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 .employeeBox {
     border: solid;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

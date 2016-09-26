@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WebApp</title>
+    <title>EmployeeManager</title>
 
     <!-- LINKS -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/main.css" />
 
 </head>
-<body>
+<body ng-cloak>
 
 <!-- Header -->
-    <div id="headerDiv">
-        <div class="container" style="height: auto">
-            <a href="/">
-                <p class="navbar-text" style="font-size: 25px;color: #23527c">Employee Manager?</p>
-            </a>
+    <div id="headerDiv" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <a href="/" class="navbar-brand">Employee Manager</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#/addNew">Add Employee</a></li>
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
 
 <!-- Main -->
     <div class="container" id="mainContainer">
@@ -36,6 +46,7 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <!--<script src="/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>-->
 
     <!-- Angular Modules and Configs-->
     <script src="app.js"></script>
@@ -45,6 +56,8 @@
     <script src="employees/employees.controller.js"></script>
     <script src="newEmployee/new.employee.controller.js"></script>
     <script src="editEmployee/edit.employee.controller.js"></script>
+    <script src="about/about.controller.js"></script>
+    <script src="contact/contact.controller.js"></script>
 
     <!-- Angular Factories and Services -->
     <script src="newEmployee/new.empolyee.service.js"></script>

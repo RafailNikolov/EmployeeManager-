@@ -27,6 +27,18 @@
                 controller: 'EditEmployeeController',
                 controllerAs: 'vm',
                 templateUrl: 'editEmployee/edit.employee.view.html'
+            })
+            .state('/about', {
+                url: '/about',
+                controller: 'AboutController',
+                controllerAs: 'vm',
+                templateUrl: 'about/about.view.html'
+            })
+            .state('/contact', {
+                url: '/contact',
+                controller: 'ContactController',
+                controllerAs: 'vm',
+                templateUrl: 'contact/contact.view.html'
             });
 
          $urlRouterProvider.otherwise('/');

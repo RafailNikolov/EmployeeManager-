@@ -1,10 +1,4 @@
-<div id="btnAddContainer" class="container">
-    <a id="addNew" href="#/addNew">
-        <button class="btn btn-success">+ Add New Employee</button>
-    </a>
-</div>
-
-<div class="container employeeBox" ng-repeat="empl in vm.results">
+<div class="container employeeBox" ng-repeat="empl in vm.results | orderBy: 'first_name'">
     <div class="container">
         <div>
             <center>
@@ -23,9 +17,11 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-8">
-                <a href="#/edit"><button class="btn btn-primary" ng-click="vm.employeeToEdit($index)">Edit Employee</button></a>
-                <button class="btn btn-danger" ng-click="vm.deleteEmployee($index)">Delete Employee</button>
+                <a href="#/edit"><button class="btn btn-primary" ng-click="vm.employeeToEdit(empl)">Edit Employee</button></a>
+                <button class="btn btn-danger" ng-click="vm.deleteEmployee(empl)">Delete Employee</button>
             </div>
         </div>
     </div>
 </div>
+
+<button id="goToTopBtn" class="btn btn-success" ng-click="vm.goToTop()">Go To Top</button>

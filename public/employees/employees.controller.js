@@ -5,14 +5,21 @@
         .module('app')
         .controller('EmployeesController', EmployeesController);
 
-    EmployeesController.$inject = ['employeesFactory', 'editEmployeeService'];
+    EmployeesController.$inject = [
+                                    'employeesFactory',
+                                    'editEmployeeService',
+                                     '$anchorScroll',
+                                     '$location'
+                                  ];
 
-    function EmployeesController(employeesFactory, editEmployeeService){
+    function EmployeesController(employeesFactory,
+        editEmployeeService, $anchorScroll, $location){
 
         var vm = this;
 
         vm.employeeToEdit = employeeToEdit;
         vm.deleteEmployee = deleteEmployee;
+        vm.goToTop = goToTop;
 
         // Get all Employees at the initialization
         employeesFactory.getEmployees()
@@ -21,12 +28,12 @@
         });
 
 
-        function employeeToEdit($index){
-            editEmployeeService.addEmployeeObj(vm.results[$index]);
+        function employeeToEdit(empl){
+            editEmployeeService.addEmployeeObj(empl);
         }
 
-        function deleteEmployee($index){
-            employeesFactory.deleteEmployee(vm.results[$index]._id)
+        function deleteEmployee(empl){
+            employeesFactory.deleteEmployee(empl._id)
                 .then(function(response){
                     if(response.data.ok){
                         employeesFactory.getEmployees()
@@ -39,6 +46,11 @@
                         console.error('F*ckkkkkkkk !');
                     }
                 });
+        }
+
+        function goToTop(){
+            $location.hash('mainContainer');
+            $anchorScroll();
         }
     }
 
