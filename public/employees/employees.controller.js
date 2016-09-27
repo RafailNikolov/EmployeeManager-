@@ -19,10 +19,8 @@
         var vm = this;
 
         vm.employeeToEdit = employeeToEdit;
-        //vm.deleteEmployee = deleteEmployee;
         vm.goToTop = goToTop;
         vm.showConfirm = showConfirm;
-        vm.confirmStatus = 'Yes';
 
         // Get all Employees at the initialization
         employeesFactory.getEmployees()
@@ -59,7 +57,6 @@
         }
 
         function showConfirm(ev, empl) {
-            // Appending dialog to document.body to cover sidenav in docs app
             var confirm = $mdDialog.confirm()
                   .title('Would you like to delete' + empl.first_name +
                    ' ' + empl.last_name + '?')

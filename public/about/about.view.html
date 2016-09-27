@@ -1,3 +1,28 @@
 <div class="container">
     <h1>{{vm.title}}</h1>
 </div>
+
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Employees">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Employees</h1>
+            <p> {{ vm.infoObj.tab1 }} </p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Create an Employee">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Create an Employee</h1>
+            <p> {{ vm.infoObj.tab2 }} </p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Edit an Employee">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Edit an Employee</h1>
+            <p> {{ vm.infoObj.tab3 }} </p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>

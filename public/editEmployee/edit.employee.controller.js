@@ -32,7 +32,7 @@
                           .openFrom({
                             top: -50,
                             width: 200,
-                            height: 200
+                            height: 20
                           })
                           .closeTo({
                             left: 1500
@@ -42,7 +42,7 @@
                             $state.go('/');
                         });
                     } else {
-                        alert('Failed.');
+                        //TODO
                     }
             });
         }
@@ -59,7 +59,7 @@
             $mdDialog.show(confirm).then(function() {
                 sendData();
             }, function() {
-                alert('Failed.');
+                //TODO
             });
         }
 
