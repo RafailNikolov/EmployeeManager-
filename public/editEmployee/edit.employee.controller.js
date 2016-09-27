@@ -5,9 +5,9 @@
         .module('app')
         .controller('EditEmployeeController', EditEmployeeController);
 
-    EditEmployeeController.$inject = ['editEmployeeService', '$location'];
+    EditEmployeeController.$inject = ['editEmployeeService', '$state'];
 
-    function EditEmployeeController(editEmployeeService, $location){
+    function EditEmployeeController(editEmployeeService, $state){
         var vm = this;
 
         vm.editEmployee = editEmployeeService.getEmployeeObj();
@@ -18,12 +18,9 @@
                 .then(function(response){
                     if(response.data.edited){
                         alert('Success.');
-                        $location.path('/');
-                        $location.path();
+                        $state.go('/');
                     } else {
                         alert('Failed.');
-                        $location.path('/');
-                        $location.path();
                     }
                 });
         }

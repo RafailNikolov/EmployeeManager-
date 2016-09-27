@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 
 
 var Employee = require(path.join(__dirname, 'db', 'employeeModel'));
+var User  = require(path.join(__dirname, 'db', 'userModel'));
 var conf_dir = path.join(__dirname, 'config');
 var conf_file = path.join(conf_dir, 'config.json');
 var server_config = JSON.parse(

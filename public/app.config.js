@@ -16,6 +16,12 @@
                 controllerAs: 'vm',
                 templateUrl: 'employees/employees.view.html'
             })
+            .state('/login', {
+                url: '/login',
+                controller: 'LoginController',
+                controllerAs: 'vm',
+                templateUrl: 'login/login.view.html'
+            })
             .state('/addNew', {
                 url: '/addNew',
                 controller: 'NewEmployeeController',

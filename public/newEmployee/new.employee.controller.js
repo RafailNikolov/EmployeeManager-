@@ -5,9 +5,9 @@
         .module('app')
         .controller('NewEmployeeController', NewEmployeeController);
 
-    NewEmployeeController.$inject = ['newEmployeeService', '$location'];
+    NewEmployeeController.$inject = ['newEmployeeService', '$state'];
 
-    function NewEmployeeController(newEmployeeService, $location){
+    function NewEmployeeController(newEmployeeService, $state){
         var vm = this;
 
         vm.newEmployee = {
@@ -24,8 +24,7 @@
                 .then(function(response){
                 if(response.data.created){
                     alert('Success.');
-                    $location.path('/');
-                    $location.path();
+                    $state.go('/');
                 } else {
                     alert('Failed.');
                 }
