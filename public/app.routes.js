@@ -10,8 +10,8 @@
     function setRoutes($stateProvider, $urlRouterProvider){
 
         $stateProvider
-            .state('/', {
-                url: '/',
+            .state('/employees', {
+                url: '/employees',
                 controller: 'EmployeesController',
                 controllerAs: 'vm',
                 templateUrl: 'employees/employees.view.html'
@@ -47,7 +47,7 @@
                 templateUrl: 'contact/contact.view.html'
             });
 
-         $urlRouterProvider.otherwise('/');
+         $urlRouterProvider.otherwise('/employees');
     }
 
 }());

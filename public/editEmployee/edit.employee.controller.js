@@ -39,7 +39,7 @@
                           })
 
                         $mdDialog.show(alertDialog).then(function(){
-                            $state.go('/');
+                            $state.go('/employees');
                         });
                     } else {
                         //TODO

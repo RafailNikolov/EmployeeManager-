@@ -24,7 +24,7 @@
                 .then(function(response){
                 if(response.data.created){
                     alert('Success.');
-                    $state.go('/');
+                    $state.go('/employees');
                 } else {
                     alert('Failed.');
                 }

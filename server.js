@@ -109,7 +109,41 @@ router.route('/update/:id')
         });
     });
 
+                ////////////////////////////////
+                /// TEST LOGIN FUNCTIONALITY ///
+/////////////////////////////////////////////////////////////////
+User.findOne({
+    "name": "rafi",
+    "password": "pass123"
+    }, function(err, user){
+        if(err){
+            console.log(err)
+        } else {
+            if(user){
+                console.log('USER');
+                console.log(user);
+            } else {
+                console.log('NO USER !!!');
+            }
+        }
+});
 
+User.findOne({
+    "name": "rafi",
+    "password": "123123"
+    }, function(err, user){
+        if(err){
+            console.log(err)
+        } else {
+            if(user){
+                console.log('USER');
+                console.log(user);
+            } else {
+                console.log('NO USER !!!');
+            }
+        }
+});
+//////////////////////////////////////////////////////////////
 
 app.use('/api',router);
 

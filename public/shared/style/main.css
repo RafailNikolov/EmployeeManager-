@@ -49,8 +49,13 @@ body {
     right: 20px;
 }
 
-.employeeBox{
+.employeeBox {
     border: solid;
+}
+
+.img {
+    width: 130px;
+    height: 130px;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
