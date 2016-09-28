@@ -7,4 +7,5 @@
             'ngAnimate',
             'ngMaterial'
         ]);
+
 }());

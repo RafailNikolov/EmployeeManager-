@@ -109,43 +109,28 @@ router.route('/update/:id')
         });
     });
 
-                ////////////////////////////////
-                /// TEST LOGIN FUNCTIONALITY ///
-/////////////////////////////////////////////////////////////////
-User.findOne({
-    "name": "rafi",
-    "password": "pass123"
-    }, function(err, user){
-        if(err){
-            console.log(err)
-        } else {
-            if(user){
-                console.log('USER');
-                console.log(user);
-            } else {
-                console.log('NO USER !!!');
-            }
-        }
-});
+router.route('/login')
+    .post(function (req, res) {
+        console.log(req.body);
+        User.findOne({
+            "name": req.body.name,
+            "password": req.body.password
+            }, function(err, user){
+                if(err){
+                    console.log(err)
+                } else {
+                    if(user){
+                        res.send(user);
+                    } else {
+                        res.send({user: false});
+                    }
+                }
+        });
+    })
 
-User.findOne({
-    "name": "rafi",
-    "password": "123123"
-    }, function(err, user){
-        if(err){
-            console.log(err)
-        } else {
-            if(user){
-                console.log('USER');
-                console.log(user);
-            } else {
-                console.log('NO USER !!!');
-            }
-        }
-});
-//////////////////////////////////////////////////////////////
+//TODO Register
 
-app.use('/api',router);
+app.use('/api', router);
 
 app.listen(server_config.port, function(){
     console.log("Started. PORT: ", server_config.port);

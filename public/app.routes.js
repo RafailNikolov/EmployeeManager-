@@ -5,10 +5,13 @@
         .module('app')
         .config(setRoutes);
 
-    setRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
+    setRoutes.$inject = [
+        '$stateProvider',
+        '$urlRouterProvider'
+    ];
 
     function setRoutes($stateProvider, $urlRouterProvider){
-
+        
         $stateProvider
             .state('/employees', {
                 url: '/employees',

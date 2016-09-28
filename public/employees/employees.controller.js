@@ -10,11 +10,15 @@
                                     'editEmployeeService',
                                      '$anchorScroll',
                                      '$location',
-                                     '$mdDialog'
+                                     '$mdDialog',
+                                     'identify',
+                                     '$state'
                                   ];
 
     function EmployeesController(employeesFactory,
-        editEmployeeService, $anchorScroll, $location, $mdDialog){
+        editEmployeeService, $anchorScroll, $location, $mdDialog, identify, $state){
+
+        init();
 
         var vm = this;
 
@@ -33,6 +37,8 @@
 
 
         function employeeToEdit(empl){
+            console.log(identify.isAuthenticated());
+            console.log(identify.currentUser());
             editEmployeeService.addEmployeeObj(empl);
         }
 
@@ -72,6 +78,13 @@
                 //TODO
             });
           }
+
+
+        function init(){
+            if(!identify.isAuthenticated()){
+                    $state.go('/login');
+            }
+        }
 
     }
 

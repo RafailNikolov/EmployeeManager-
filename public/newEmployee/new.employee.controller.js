@@ -5,9 +5,11 @@
         .module('app')
         .controller('NewEmployeeController', NewEmployeeController);
 
-    NewEmployeeController.$inject = ['newEmployeeService', '$state'];
+    NewEmployeeController.$inject = ['newEmployeeService', '$state', 'identify'];
 
-    function NewEmployeeController(newEmployeeService, $state){
+    function NewEmployeeController(newEmployeeService, $state, identify){
+        init();
+
         var vm = this;
 
         vm.newEmployee = {
@@ -29,6 +31,12 @@
                     alert('Failed.');
                 }
             });
+        }
+
+        function init(){
+            if(!identify.isAuthenticated()){
+                $state.go('/login');
+            }
         }
 
     }

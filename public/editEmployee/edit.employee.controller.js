@@ -8,10 +8,13 @@
     EditEmployeeController.$inject = [
         'editEmployeeService',
         '$state',
-        '$mdDialog'
+        '$mdDialog',
+        'identify'
     ];
 
-    function EditEmployeeController(editEmployeeService, $state, $mdDialog){
+    function EditEmployeeController(editEmployeeService, $state, $mdDialog, identify){
+        init();
+
         var vm = this;
 
         vm.editEmployee = editEmployeeService.getEmployeeObj();
@@ -61,6 +64,13 @@
             }, function() {
                 //TODO
             });
+        }
+
+
+        function init(){
+            if(!identify.isAuthenticated()){
+                $state.go('/login');
+            }
         }
 
     }
