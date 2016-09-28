@@ -122,7 +122,7 @@ router.route('/login')
                     if(user){
                         res.send(user);
                     } else {
-                        res.send({user: false});
+                        res.send(false);
                     }
                 }
         });

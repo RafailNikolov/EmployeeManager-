@@ -22,12 +22,9 @@
 
         function loginSuccess(userObj){
             user = userObj;
-            console.log('identify');
-            console.log(userObj);
         }
 
         function currentUser(){
-            console.log(user);
             return user;
         }
 
