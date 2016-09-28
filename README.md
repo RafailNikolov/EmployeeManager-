@@ -44,4 +44,7 @@ Once inside the DIR type:
 ```
 Server is running on localhost:3232
 
+User: rafi
+Password: pass123
+
 :)
