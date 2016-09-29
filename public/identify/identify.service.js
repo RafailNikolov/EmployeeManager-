@@ -17,7 +17,7 @@
     //////////////////////////////////////
 
         function isAuthenticated(){
-             return !!this.currentUser()._id;
+            return !!this.currentUser().id;
         }
 
         function loginSuccess(userObj){

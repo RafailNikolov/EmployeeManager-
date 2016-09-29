@@ -11,7 +11,7 @@
     ];
 
     function setRoutes($stateProvider, $urlRouterProvider){
-        
+
         $stateProvider
             .state('/employees', {
                 url: '/employees',
@@ -24,6 +24,12 @@
                 controller: 'LoginController',
                 controllerAs: 'vm',
                 templateUrl: 'login/login.view.html'
+            })
+            .state('/register', {
+                url: '/register',
+                controller: 'RegisterController',
+                controllerAs: 'vm',
+                templateUrl: 'register/register.view.html'
             })
             .state('/addNew', {
                 url: '/addNew',

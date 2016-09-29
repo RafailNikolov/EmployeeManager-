@@ -26,13 +26,6 @@
         vm.goToTop = goToTop;
         vm.showConfirm = showConfirm;
 
-        // Get all Employees at the initialization
-        employeesFactory.getEmployees()
-            .then(function(response){
-            vm.results = response.data;
-        });
-
-
         /////////////////////////////////////////////////////
 
 
@@ -77,12 +70,17 @@
             }, function() {
                 //TODO
             });
-          }
+        }
 
 
         function init(){
             if(!identify.isAuthenticated()){
                     $state.go('/login');
+            } else {
+                employeesFactory.getEmployees()
+                    .then(function(response){
+                    vm.results = response.data;
+                });
             }
         }
 

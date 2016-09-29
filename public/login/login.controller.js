@@ -18,6 +18,7 @@
         vm.title = 'Login Page';
         vm.user = {};
         vm.login = login;
+        vm.register = register;
 
         var alertDialogSuccess = $mdDialog.alert()
           .clickOutsideToClose(true)
@@ -55,6 +56,7 @@
             LoginService.sendData(vm.user)
                 .then(function(response){
                     if(response.data){
+                        console.log(response);
                         identify.loginSuccess(response.data);
                         $mdDialog.show(alertDialogSuccess).then(function(){
                             $state.go('/employees');
@@ -63,6 +65,10 @@
                         $mdDialog.show(alertDialogError);
                     }
                 });
+        }
+
+        function register(){
+            $state.go('/register');
         }
 
     }

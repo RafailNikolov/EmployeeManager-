@@ -117,18 +117,34 @@ router.route('/login')
             "password": req.body.password
             }, function(err, user){
                 if(err){
-                    console.log(err)
+                    console.log(err);
                 } else {
                     if(user){
-                        res.send(user);
+                        res.send({
+                            name: user.name,
+                            id: user._id
+                        });
                     } else {
                         res.send(false);
                     }
                 }
         });
-    })
+    });
 
-//TODO Register
+router.route('/register')
+    .post(function (req, res) {
+        var user = new User();
+        user.name = req.body.name;
+        user.password = req.body.password;
+        user.save(function(err, user){
+            if (err) {
+                res.send(err);
+                console.log(err);
+            } else {
+                res.send(user);
+            }
+        });
+    });
 
 app.use('/api', router);
 

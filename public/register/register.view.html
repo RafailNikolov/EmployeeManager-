@@ -1,5 +1,5 @@
 <div>
-        <h1>{{vm.title}}</h1>
+    <h1>{{vm.title}}</h1>
 
 
     <form name="clientLogin" id="loginForm" class="centered">
@@ -21,7 +21,15 @@
             </md-input-container>
         </div>
 
-           <md-button class="md-raised md-primary" ng-click="vm.login()">Login</md-button>
-           <md-button class="md-primary" ng-click="vm.register()">Register</md-button>
+        <div>
+            <md-input-container>
+              <input type="text" placeholder="Repeat Password" ng-required="true" name="userPassword" ng-model="vm.repeatPassword">
+              <div ng-messages="clientLogin.userPassword.$error">
+                <div ng-message="required">Your password is required.</div>
+              </div>
+            </md-input-container>
+        </div>
+
+           <md-button class="md-raised md-primary" ng-click="vm.register()">Register</md-button>
     </form>
- </div>
+</div>
