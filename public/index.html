@@ -14,7 +14,7 @@
 <body ng-cloak>
 
 <!-- Header -->
-    <div id="headerDiv" class="navbar navbar-default navbar-static-top">
+    <div id="headerDiv" class="navbar navbar-default navbar-static-top" ng-controller="UserController as vm">
         <div class="container">
             <a href="/" class="navbar-brand">Employee Manager</a>
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -28,6 +28,7 @@
                     <li><a href="#/addNew">Add Employee</a></li>
                     <li><a href="#/about">About</a></li>
                     <li><a href="#/contact">Contact</a></li>
+                    <li><a href="" ng-click="vm.logOut()">LogOut {{vm.user}}</a></li>
                 </ul>
             </div>
         </div>
@@ -55,6 +56,7 @@
     <script src="app.routes.js"></script>
 
     <!-- Angular Controllers -->
+    <script src="user/user.controller.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="register/register.controller.js"></script>
     <script src="employees/employees.controller.js"></script>

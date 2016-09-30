@@ -10,13 +10,18 @@
     function LoginService($http){
 
         return {
-            sendData: sendData
+            sendData: sendData,
+            logOut: logOut
         }
 
         ////////////////////////////////////////
 
         function sendData(obj){
             return $http.post('api/login', obj);
+        }
+
+        function logOut(){
+
         }
     }
 }());

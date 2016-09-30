@@ -71,7 +71,7 @@
 
 
         function checkPasswords(){
-            if(vm.user.password !== vm.repeatPassword){
+            if(vm.user.password != vm.repeatPassword){
                 $mdDialog.show(alertDialogError);
             } else {
                 register();
@@ -93,7 +93,6 @@
             LoginService.sendData(userObj)
                 .then(function(response){
                     if(response.data){
-                        console.log(response);
                         identify.loginSuccess(response.data);
                         $mdDialog.show(alertDialogSuccess).then(function(){
                             $state.go('/employees');

@@ -11,10 +11,11 @@
         return {
             currentUser: currentUser,
             isAuthenticated: isAuthenticated,
-            loginSuccess: loginSuccess
+            loginSuccess: loginSuccess,
+            logOut : logOut
         }
 
-    //////////////////////////////////////
+    ///////////////////////////////////////////////
 
         function isAuthenticated(){
             return !!this.currentUser().id;
@@ -26,6 +27,10 @@
 
         function currentUser(){
             return user;
+        }
+
+        function logOut(){
+            user = {};
         }
 
     }

@@ -56,7 +56,6 @@
             LoginService.sendData(vm.user)
                 .then(function(response){
                     if(response.data){
-                        console.log(response);
                         identify.loginSuccess(response.data);
                         $mdDialog.show(alertDialogSuccess).then(function(){
                             $state.go('/employees');

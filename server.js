@@ -137,7 +137,7 @@ router.route('/register')
         user.password = req.body.password;
         user.save(function(err, user){
             if (err) {
-                res.send(err);
+                res.send(false);
             } else {
                 res.send(user);
             }
