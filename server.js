@@ -30,7 +30,6 @@ router.use(function (req, res, next) {
     next();
 });
 
-console.log(path.join(__dirname, './bower_components'));
 
 //GET EMPLOYEES
 router.route('/get')
@@ -101,7 +100,6 @@ router.route('/update/:id')
                     if (err) {
                         res.send(err);
                     } else {
-                        //console.log(employee);
                         res.send({edited:true});
                     }
                 });
@@ -109,15 +107,15 @@ router.route('/update/:id')
         });
     });
 
+//LOGIN
 router.route('/login')
     .post(function (req, res) {
-        console.log(req.body);
         User.findOne({
             "name": req.body.name,
             "password": req.body.password
             }, function(err, user){
                 if(err){
-                    console.log(err);
+                    res.send(false);
                 } else {
                     if(user){
                         res.send({
@@ -131,6 +129,7 @@ router.route('/login')
         });
     });
 
+//REGISTER
 router.route('/register')
     .post(function (req, res) {
         var user = new User();
@@ -139,7 +138,6 @@ router.route('/register')
         user.save(function(err, user){
             if (err) {
                 res.send(err);
-                console.log(err);
             } else {
                 res.send(user);
             }
