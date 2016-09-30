@@ -30,8 +30,6 @@
 
 
         function employeeToEdit(empl){
-            console.log(identify.isAuthenticated());
-            console.log(identify.currentUser());
             editEmployeeService.addEmployeeObj(empl);
         }
 
