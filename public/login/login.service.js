@@ -11,7 +11,6 @@
 
         return {
             sendData: sendData,
-            logOut: logOut
         }
 
         ////////////////////////////////////////
@@ -20,8 +19,5 @@
             return $http.post('api/login', obj);
         }
 
-        function logOut(){
-
-        }
     }
 }());

@@ -114,17 +114,17 @@ router.route('/login')
             "name": req.body.name,
             "password": req.body.password
             }, function(err, user){
-                if(err){
-                    res.send(false);
+                if(user){
+                    res.send({
+                        name: user.name,
+                        id: user._id
+                    });
                 } else {
-                    if(user){
-                        res.send({
-                            name: user.name,
-                            id: user._id
-                        });
-                    } else {
-                        res.send(false);
-                    }
+                    console.log('===================================');
+                    console.log('Login user error:');
+                    console.log(err);
+                    console.log('===================================');
+                    res.send(false);
                 }
         });
     });
@@ -137,6 +137,10 @@ router.route('/register')
         user.password = req.body.password;
         user.save(function(err, user){
             if (err) {
+                console.log('===================================');
+                console.log('Register user error:');
+                console.log(err);
+                console.log('===================================');
                 res.send(false);
             } else {
                 res.send(user);

@@ -57,6 +57,7 @@
                 .then(function(response){
                     if(response.data){
                         identify.loginSuccess(response.data);
+                        console.log(response.data);
                         $mdDialog.show(alertDialogSuccess).then(function(){
                             $state.go('/employees');
                         });
