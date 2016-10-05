@@ -13,12 +13,6 @@
     function setRoutes($stateProvider, $urlRouterProvider){
 
         $stateProvider
-            .state('/employees', {
-                url: '/employees',
-                controller: 'EmployeesController',
-                controllerAs: 'vm',
-                templateUrl: 'employees/employees.view.html'
-            })
             .state('/login', {
                 url: '/login',
                 controller: 'LoginController',
@@ -30,6 +24,12 @@
                 controller: 'RegisterController',
                 controllerAs: 'vm',
                 templateUrl: 'register/register.view.html'
+            })
+            .state('/employees', {
+                url: '/employees',
+                controller: 'EmployeesController',
+                controllerAs: 'vm',
+                templateUrl: 'employees/employees.view.html'
             })
             .state('/addNew', {
                 url: '/addNew',
@@ -48,6 +48,12 @@
                 controller: 'AboutController',
                 controllerAs: 'vm',
                 templateUrl: 'about/about.view.html'
+            })
+            .state('/test', {
+                url: '/test',
+                controller: 'TestController',
+                controllerAs: 'test_ctrl',
+                templateUrl: 'test/test.view.html'
             })
             .state('/contact', {
                 url: '/contact',
