@@ -10,16 +10,16 @@
     function NewEmployeeController(newEmployeeService, $state, identify, $mdDialog){
         init();
 
-        var vm = this;
+        var newEmplCtrl = this;
 
-        vm.newEmployee = {
+        newEmplCtrl.newEmployee = {
             opt1: false,
             opt2: false,
             opt3: false,
             opt4: false,
             opt5: false
         };
-        vm.sendData = sendData;
+        newEmplCtrl.sendData = sendData;
 
         var alertDialogSuccess = $mdDialog.alert()
           .clickOutsideToClose(true)
@@ -55,7 +55,7 @@
 ////////////////////////////////////////////////////
 
         function sendData(){
-            newEmployeeService.sendData(vm.newEmployee)
+            newEmployeeService.sendData(newEmplCtrl.newEmployee)
                 .then(function(response){
                 if(response.data.created){
                     $mdDialog.show(alertDialogSuccess).then(function(){

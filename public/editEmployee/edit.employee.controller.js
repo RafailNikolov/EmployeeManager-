@@ -15,15 +15,15 @@
     function EditEmployeeController(editEmployeeService, $state, $mdDialog, identify){
         init();
 
-        var vm = this;
+        var editEmplCtrl = this;
 
-        vm.editEmployee = editEmployeeService.getEmployeeObj();
-        vm.confirmEdit = confirmEdit;
+        editEmplCtrl.editEmployee = editEmployeeService.getEmployeeObj();
+        editEmplCtrl.confirmEdit = confirmEdit;
 
         ////////////////////////////////////////////////////////
 
         function sendData(){
-            editEmployeeService.sendData(vm.editEmployee)
+            editEmployeeService.sendData(editEmplCtrl.editEmployee)
                 .then(function(response){
                     if(response.data.edited){
                         var alertDialog = $mdDialog.alert()

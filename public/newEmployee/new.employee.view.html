@@ -7,47 +7,47 @@
                 <div class="col-md-6">
                     <h3>NEW EMPLOYEE</h3>
                     <div style="width: 150px" class="form-group"><label for="first_name">Name</label>
-                        <input type="text" class="form-control" required placeholder="Ivan" ng-model="vm.newEmployee.first_name">
+                        <input type="text" class="form-control" required placeholder="Ivan" ng-model="newEmplCtrl.newEmployee.first_name">
                     </div>
                     <div style="width: 150px" class="form-group"><label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" required placeholder="Ivanov" ng-model="vm.newEmployee.last_name">
+                        <input type="text" class="form-control" required placeholder="Ivanov" ng-model="newEmplCtrl.newEmployee.last_name">
                     </div>
                     <div  style="width: 200px" class="form-group">
                         <label for="e_mail">Email</label>
-                        <input type="email" class="form-control" required placeholder="ivan.ivanov@example.com" ng-model="vm.newEmployee.e_mail">
+                        <input type="email" class="form-control" required placeholder="ivan.ivanov@example.com" ng-model="newEmplCtrl.newEmployee.e_mail">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div>
                         <label>
-                            <input style="margin: 15px; margin-top: 100px" type="checkbox" ng-model="vm.newEmployee.opt1">Parking Space
+                            <input style="margin: 15px; margin-top: 100px" type="checkbox" ng-model="newEmplCtrl.newEmployee.opt1">Parking Space
                         </label>
                     </div>
                     <div>
                         <label>
-                            <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt2">Home Office
+                            <input style="margin: 15px" type="checkbox" ng-model="newEmplCtrl.newEmployee.opt2">Home Office
                         </label>
                     </div>
                     <div>
                         <label>
-                            <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt3">Alcohol Consumption
+                            <input style="margin: 15px" type="checkbox" ng-model="newEmplCtrl.newEmployee.opt3">Alcohol Consumption
                         </label>
                     </div>
                     <div>
                         <label>
-                            <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt4">Toilet Access
+                            <input style="margin: 15px" type="checkbox" ng-model="newEmplCtrl.newEmployee.opt4">Toilet Access
                         </label>
                     </div>
                     <div>
                         <label>
-                            <input style="margin: 15px" type="checkbox" ng-model="vm.newEmployee.opt5">Weekly Proctology Exams
+                            <input style="margin: 15px" type="checkbox" ng-model="newEmplCtrl.newEmployee.opt5">Weekly Proctology Exams
                         </label>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-6">
-                    <button type="submit" class="btn btn-success" id="saveNewEmp" ng-click="vm.sendData()">Save new Employee</button>
+                    <button type="submit" class="btn btn-success" id="saveNewEmp" ng-click="newEmplCtrl.sendData()">Save new Employee</button>
                     <a href="#/" id="getAllEmployees">
                         <button class="btn btn-info" >View All Employees</button>
                     </a>

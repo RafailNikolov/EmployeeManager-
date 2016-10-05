@@ -13,12 +13,12 @@
         ];
 
     function LoginController(LoginService, $state, $mdDialog, identify){
-        var vm = this;
+        var loginCtrl = this;
 
-        vm.title = 'Login Page';
-        vm.user = {};
-        vm.login = login;
-        vm.register = register;
+        loginCtrl.title = 'Login Page';
+        loginCtrl.user = {};
+        loginCtrl.login = login;
+        loginCtrl.register = register;
 
         var alertDialogSuccess = $mdDialog.alert()
           .clickOutsideToClose(true)
@@ -53,7 +53,7 @@
     /////////////////////////////////////////
 
         function login(){
-            LoginService.sendData(vm.user)
+            LoginService.sendData(loginCtrl.user)
                 .then(function(response){
                     if(response.data){
                         identify.loginSuccess(response.data);

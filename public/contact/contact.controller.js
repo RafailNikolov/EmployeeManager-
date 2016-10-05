@@ -6,11 +6,11 @@
         .controller('ContactController', ContactController);
 
         function ContactController(){
-            var vm = this;
+            var contactCtrl = this;
 
-            vm.title = "Contact Page";
-            vm.e_mail = "nikolov_rafail@yahoo.com";
-            vm.gitHub = "https://github.com/RafailNikolov/";
+            contactCtrl.title = "Contact Page";
+            contactCtrl.e_mail = "nikolov_rafail@yahoo.com";
+            contactCtrl.gitHub = "https://github.com/RafailNikolov/";
 
             //TODO Display Contact INFO
         }

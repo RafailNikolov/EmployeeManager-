@@ -20,11 +20,11 @@
 
         init();
 
-        var vm = this;
+        var emplCtrl = this;
 
-        vm.employeeToEdit = employeeToEdit;
-        vm.goToTop = goToTop;
-        vm.showConfirm = showConfirm;
+        emplCtrl.employeeToEdit = employeeToEdit;
+        emplCtrl.goToTop = goToTop;
+        emplCtrl.showConfirm = showConfirm;
 
         /////////////////////////////////////////////////////
 
@@ -39,7 +39,7 @@
                     if(response.data.ok){
                         employeesFactory.getEmployees()
                             .then(function(response){
-                                vm.results = response.data;
+                                emplCtrl.results = response.data;
                                 alert('Employee Deleted.');
                         });
                     } else {
@@ -77,7 +77,7 @@
             } else {
                 employeesFactory.getEmployees()
                     .then(function(response){
-                    vm.results = response.data;
+                    emplCtrl.results = response.data;
                 });
             }
         }

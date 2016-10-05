@@ -14,13 +14,13 @@
     ];
 
     function RegisterController(RegisterService, $state, $mdDialog, LoginService, identify){
-        var vm = this;
+        var registerCtrl = this;
 
-        vm.title = 'Register';
-        vm.user = {};
-        vm.repeatPassword = '';
-        vm.checkPasswords = checkPasswords;
-        vm.register = register;
+        registerCtrl.title = 'Register';
+        registerCtrl.user = {};
+        registerCtrl.repeatPassword = '';
+        registerCtrl.checkPasswords = checkPasswords;
+        registerCtrl.register = register;
 
     //////////////////////////////////////////////////////
 
@@ -71,7 +71,7 @@
 
 
         function checkPasswords(){
-            if(vm.user.password != vm.repeatPassword){
+            if(registerCtrl.user.password != registerCtrl.repeatPassword){
                 $mdDialog.show(alertDialogError);
             } else {
                 register();
@@ -79,7 +79,7 @@
         }
 
         function register(){
-            RegisterService.sendData(vm.user)
+            RegisterService.sendData(registerCtrl.user)
                 .then(function(response){
                     if(response.data){
                         autoLogin(response.data);

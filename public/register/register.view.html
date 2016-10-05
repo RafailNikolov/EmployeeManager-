@@ -1,11 +1,11 @@
 <div>
-    <h1>{{vm.title}}</h1>
+    <h1>{{registerCtrl.title}}</h1>
 
 
     <form name="clientLogin" id="loginForm" class="centered">
         <div>
             <md-input-container>
-              <input name="userName" type="text" placeholder="Name" ng-required="true" ng-model="vm.user.name">
+              <input name="userName" type="text" placeholder="Name" ng-required="true" ng-model="registerCtrl.user.name">
               <div ng-messages="clientLogin.userName.$error">
                 <div ng-message="required">User Name is required.</div>
               </div>
@@ -14,7 +14,7 @@
 
         <div>
             <md-input-container>
-              <input type="text" placeholder="Password" ng-required="true" name="userPassword" ng-model="vm.user.password">
+              <input type="text" placeholder="Password" ng-required="true" name="userPassword" ng-model="registerCtrl.user.password">
               <div ng-messages="clientLogin.userPassword.$error">
                 <div ng-message="required">Your password is required.</div>
               </div>
@@ -23,13 +23,13 @@
 
         <div>
             <md-input-container>
-              <input type="text" placeholder="Repeat Password" ng-required="true" name="userPassword" ng-model="vm.repeatPassword">
+              <input type="text" placeholder="Repeat Password" ng-required="true" name="userPassword" ng-model="registerCtrl.repeatPassword">
               <div ng-messages="clientLogin.userPassword.$error">
                 <div ng-message="required">Your password is required.</div>
               </div>
             </md-input-container>
         </div>
 
-           <md-button class="md-raised md-primary" ng-click="vm.checkPasswords()">Register</md-button>
+           <md-button class="md-raised md-primary" ng-click="registerCtrl.checkPasswords()">Register</md-button>
     </form>
 </div>

@@ -16,37 +16,37 @@
             .state('/login', {
                 url: '/login',
                 controller: 'LoginController',
-                controllerAs: 'vm',
+                controllerAs: 'loginCtrl',
                 templateUrl: 'login/login.view.html'
             })
             .state('/register', {
                 url: '/register',
                 controller: 'RegisterController',
-                controllerAs: 'vm',
+                controllerAs: 'registerCtrl',
                 templateUrl: 'register/register.view.html'
             })
             .state('/employees', {
                 url: '/employees',
                 controller: 'EmployeesController',
-                controllerAs: 'vm',
+                controllerAs: 'emplCtrl',
                 templateUrl: 'employees/employees.view.html'
             })
             .state('/addNew', {
                 url: '/addNew',
                 controller: 'NewEmployeeController',
-                controllerAs: 'vm',
+                controllerAs: 'newEmplCtrl',
                 templateUrl: 'newEmployee/new.employee.view.html'
             })
             .state('/edit', {
                 url: '/edit',
                 controller: 'EditEmployeeController',
-                controllerAs: 'vm',
+                controllerAs: 'editEmplCtrl',
                 templateUrl: 'editEmployee/edit.employee.view.html'
             })
             .state('/about', {
                 url: '/about',
                 controller: 'AboutController',
-                controllerAs: 'vm',
+                controllerAs: 'aboutCtrl',
                 templateUrl: 'about/about.view.html'
             })
             .state('/test', {
@@ -58,7 +58,7 @@
             .state('/contact', {
                 url: '/contact',
                 controller: 'ContactController',
-                controllerAs: 'vm',
+                controllerAs: 'contactCtrl',
                 templateUrl: 'contact/contact.view.html'
             });
 

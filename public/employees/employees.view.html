@@ -1,4 +1,4 @@
-<div class="container employeeBox" ng-repeat="empl in vm.results | orderBy: 'first_name'">
+<div class="container employeeBox" ng-repeat="empl in emplCtrl.results | orderBy: 'first_name'">
     <div class="container">
         <div>
             <center>
@@ -22,8 +22,8 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-8">
-                <a href="#/edit"><button class="btn btn-primary" ng-click="vm.employeeToEdit(empl)">Edit Employee</button></a>
-                <button class="btn btn-danger" ng-click="vm.showConfirm($event, empl)">Delete Employee</button>
+                <a href="#/edit"><button class="btn btn-primary" ng-click="emplCtrl.employeeToEdit(empl)">Edit Employee</button></a>
+                <button class="btn btn-danger" ng-click="emplCtrl.showConfirm($event, empl)">Delete Employee</button>
             </div>
         </div>
     </div>
