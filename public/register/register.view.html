@@ -13,7 +13,7 @@
 
         <div>
             <md-input-container>
-              <input type="text" placeholder="Password" ng-required="true" name="userPassword" ng-model="registerCtrl.user.password">
+              <input type="password" placeholder="Password" ng-required="true" name="userPassword" ng-model="registerCtrl.user.password">
               <div ng-messages="clientLogin.userPassword.$error">
                 <div ng-message="required">Your password is required.</div>
               </div>
@@ -22,7 +22,7 @@
 
         <div>
             <md-input-container>
-              <input type="text" placeholder="Repeat Password" ng-required="true" name="userPassword" ng-model="registerCtrl.repeatPassword">
+              <input type="password" placeholder="Repeat Password" ng-required="true" name="userPassword" ng-model="registerCtrl.repeatPassword">
               <div ng-messages="clientLogin.userPassword.$error">
                 <div ng-message="required">Your password is required.</div>
               </div>
