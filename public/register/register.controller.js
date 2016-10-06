@@ -23,6 +23,8 @@
         registerCtrl.register = register;
         registerCtrl.login = login;
 
+        init();
+
     //////////////////////////////////////////////////////
 
         var alertDialogSuccess = $mdDialog.alert()
@@ -70,6 +72,13 @@
             left: 1500
         });
 
+////////////////////////////////////////////////////////////
+
+        function init(){
+            if(identify.isAuthenticated()){
+                $state.go('/employees');
+            }
+        }
 
         function checkPasswords(){
             if(registerCtrl.user.password != registerCtrl.repeatPassword){

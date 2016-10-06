@@ -8,7 +8,7 @@ body {
 }
 
 #btnAddContainer {
-    
+
 }
 
 #mainContainer {
@@ -58,7 +58,7 @@ body {
     height: 130px;
 }
 
-#loginForm {
+.loginForm {
 	width: 380px;
 	margin: 4em auto;
 	padding: 3em 2em 2em 2em;

@@ -7,7 +7,6 @@
 
     UserController.$inject = ['identify', '$state', '$scope', '$location'];
 
-    /* @ngInject */
     function UserController(identify, $state, $scope, $location) {
         var vm = this;
 

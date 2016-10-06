@@ -1,8 +1,7 @@
-<div>
-    <h1>{{registerCtrl.title}}</h1>
+<div class="container-fluid">
+    <h2 class="centered">{{registerCtrl.title}}</h2>
 
-
-    <form name="clientLogin" id="loginForm" class="centered">
+    <form name="clientLogin" class="centered loginForm">
         <div>
             <md-input-container>
               <input name="userName" type="text" placeholder="Name" ng-required="true" ng-model="registerCtrl.user.name">

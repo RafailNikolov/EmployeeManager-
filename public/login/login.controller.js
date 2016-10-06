@@ -20,6 +20,8 @@
         loginCtrl.login = login;
         loginCtrl.register = register;
 
+        init();
+
         var alertDialogSuccess = $mdDialog.alert()
           .clickOutsideToClose(true)
           .title('SUCCESS !')
@@ -51,6 +53,12 @@
         });
 
     /////////////////////////////////////////
+
+        function init(){
+            if(identify.isAuthenticated()){
+                $state.go('/employees');
+            }
+        }
 
         function login(){
             LoginService.sendData(loginCtrl.user)
