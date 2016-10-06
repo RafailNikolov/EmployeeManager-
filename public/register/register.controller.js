@@ -21,6 +21,7 @@
         registerCtrl.repeatPassword = '';
         registerCtrl.checkPasswords = checkPasswords;
         registerCtrl.register = register;
+        registerCtrl.login = login;
 
     //////////////////////////////////////////////////////
 
@@ -101,6 +102,10 @@
                         $mdDialog.show(alertDialogError);
                     }
                 });
+        }
+
+        function login(){
+            $state.go('/login');
         }
     }
 }());
