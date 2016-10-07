@@ -1,4 +1,3 @@
-'use strict';
 
 var fs = require('fs');
 var path = require('path');
@@ -123,7 +122,6 @@ router.route('/login')
                     console.log('===================================');
                     console.log('Login user error:');
                     console.log(err);
-                    console.log('===================================');
                     res.send(false);
                 }
         });
@@ -140,7 +138,6 @@ router.route('/register')
                 console.log('===================================');
                 console.log('Register user error:');
                 console.log(err);
-                console.log('===================================');
                 res.send(false);
             } else {
                 res.send(user);

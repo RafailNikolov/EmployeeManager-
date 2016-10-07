@@ -5,8 +5,8 @@
     <form name="clientLogin" class="centered loginForm">
         <div>
             <md-input-container>
-              <input name="userName" type="text" placeholder="Name" ng-required="true" ng-model="loginCtrl.user.name">
-              <div ng-messages="clientLogin.userName.$error">
+              <input name="userName" type="text" placeholder="Name" required ng-model="loginCtrl.user.name">
+              <div ng-messages="clientLogin.userName.$error" md-auto-hide="true">
                 <div ng-message="required">User Name is required.</div>
               </div>
             </md-input-container>
@@ -14,14 +14,14 @@
 
         <div>
             <md-input-container>
-              <input type="password" placeholder="Password" ng-required="true" name="userPassword" ng-model="loginCtrl.user.password">
+              <input type="password" placeholder="Password" required name="userPassword" ng-model="loginCtrl.user.password">
               <div ng-messages="clientLogin.userPassword.$error">
                 <div ng-message="required">Your password is required.</div>
               </div>
             </md-input-container>
         </div>
 
-           <md-button class="md-raised md-primary" ng-click="loginCtrl.login()">Login</md-button>
+           <md-button class="md-raised md-primary" ng-disabled="clientLogin.$invalid" ng-click="loginCtrl.login()">Login</md-button>
            <md-button class="md-primary" ng-click="loginCtrl.register()">Register</md-button>
     </form>
  </div>
