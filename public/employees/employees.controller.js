@@ -8,11 +8,11 @@
     EmployeesController.$inject = [
                                     'employeesFactory',
                                     'editEmployeeService',
-                                     '$anchorScroll',
-                                     '$location',
-                                     '$mdDialog',
-                                     'identify',
-                                     '$state'
+                                    '$anchorScroll',
+                                    '$location',
+                                    '$mdDialog',
+                                    'identify',
+                                    '$state'
                                   ];
 
     function EmployeesController(employeesFactory,
