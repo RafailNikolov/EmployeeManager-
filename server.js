@@ -1,4 +1,5 @@
 
+
 var fs = require('fs');
 var path = require('path');
 var https = require('https');
@@ -114,6 +115,7 @@ router.route('/login')
             "password": req.body.password
             }, function(err, user){
                 if(user){
+                    console.log(user);
                     res.send({
                         name: user.name,
                         id: user._id
@@ -121,7 +123,7 @@ router.route('/login')
                 } else {
                     console.log('===================================');
                     console.log('Login user error:');
-                    console.log(err);
+                    console.log(user);
                     res.send(false);
                 }
         });
@@ -137,7 +139,7 @@ router.route('/register')
             if (err) {
                 console.log('===================================');
                 console.log('Register user error:');
-                console.log(err);
+                console.log(err.errmsg);
                 res.send(false);
             } else {
                 res.send(user);

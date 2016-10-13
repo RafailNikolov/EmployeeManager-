@@ -45,7 +45,7 @@
         var alertDialogError = $mdDialog.alert()
           .clickOutsideToClose(true)
           .title("Passwords don't match!")
-          .textContent('passwords must be the same.')
+          .textContent('Passwords must be the same.')
           .ariaLabel('Something')
           .ok('OK')
           .openFrom({

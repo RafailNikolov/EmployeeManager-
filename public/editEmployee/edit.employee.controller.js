@@ -20,27 +20,28 @@
         editEmplCtrl.editEmployee = editEmployeeService.getEmployeeObj();
         editEmplCtrl.confirmEdit = confirmEdit;
 
+        var alertDialog = $mdDialog.alert()
+          .clickOutsideToClose(true)
+          .title('SUCCESS !')
+          .textContent('New information stored.')
+          .ariaLabel('Something')
+          .ok('OK')
+          .openFrom({
+            top: -50,
+            width: 200,
+            height: 20
+          })
+          .closeTo({
+            left: 1500
+          })
+
+
         ////////////////////////////////////////////////////////
 
         function sendData(){
             editEmployeeService.sendData(editEmplCtrl.editEmployee)
                 .then(function(response){
                     if(response.data.edited){
-                        var alertDialog = $mdDialog.alert()
-                          .clickOutsideToClose(true)
-                          .title('SUCCESS !')
-                          .textContent('New information stored.')
-                          .ariaLabel('Something')
-                          .ok('OK')
-                          .openFrom({
-                            top: -50,
-                            width: 200,
-                            height: 20
-                          })
-                          .closeTo({
-                            left: 1500
-                          })
-
                         $mdDialog.show(alertDialog).then(function(){
                             $state.go('/employees');
                         });
@@ -58,7 +59,6 @@
                   .targetEvent(ev)
                   .ok('Yes')
                   .cancel('Cancel');
-
             $mdDialog.show(confirm).then(function() {
                 sendData();
             }, function() {

@@ -65,9 +65,7 @@
 
             $mdDialog.show(confirm).then(function() {
                 deleteEmployee(empl);
-            }, function() {
-                //TODO
-            });
+            }, function() {});
         }
 
 
